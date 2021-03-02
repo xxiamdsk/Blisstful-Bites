@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blisstful Bites</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">
+        <a href="#">Blisstful Bites</a>
+      </div>
+      <ul class="nav__links">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">About Us</a></li>
+        <li class="link"><a href="#">Services</a></li>
+        <li class="link"><a href="#" id="nav__btn">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="container">
+      <div class="content__container">
+        <h1>
+          Welcome to <br />
+          <span class="heading__1">Blisful Bites</span><br />
+          <span class="heading__2">Explore our Food Advevnture.</span><br />
+        </h1>
+        <p>
+          Discover an exquisite fusion of flavors and ambiance that promises to
+          elevate your dining experience. Indulge in our globally-inspired menu,
+          crafted with care and passion. Join us and embark on a journey of
+          culinary delight. Your table awaits.
+        </p>
+        <form action="#">
+          <input type="text" placeholder="Send Us A Message" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide" data-swiper-autoplay="4000">
+            <div class="image__container">
+              <img src="./images/img1.png" alt="" />
+              <img src="./images/img2.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide" data-swiper-autoplay="4000">
+            <div class="image__container">
+              <img src="./images/img3.png" alt="" />
+              <img src="./images/img4.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide" data-swiper-autoplay="4000">
+            <div class="image__container">
+              <img src="./images/img5.png" alt="" />
+              <img src="./images/img6.png" alt="" />
+            </div>
+          </div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // speed 
+        speed: 1000,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false
+        }
+      });
+    </script>
+  </body>
+</html>
